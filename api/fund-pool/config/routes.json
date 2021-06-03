@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/fund-pools",
+      "handler": "fund-pool.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fund-pools/count",
+      "handler": "fund-pool.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fund-pools/:id",
+      "handler": "fund-pool.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/fund-pools",
+      "handler": "fund-pool.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/fund-pools/:id",
+      "handler": "fund-pool.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/fund-pools/:id",
+      "handler": "fund-pool.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

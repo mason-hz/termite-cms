@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "strategies",
+  "collectionName": "fund_pools",
   "info": {
-    "name": "strategy",
-    "description": ""
+    "name": "FundPool"
   },
   "options": {
     "increments": true,
@@ -12,19 +11,13 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "name": {
+      "type": "string"
+    },
     "chainId": {
       "type": "string"
     },
-    "website": {
-      "type": "string"
-    },
-    "apy": {
-      "type": "string"
-    },
     "address": {
-      "type": "string"
-    },
-    "name": {
       "type": "string"
     }
   }
