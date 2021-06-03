@@ -537,6 +537,9 @@
           "name": {
             "type": "string"
           },
+          "websiteName": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -558,6 +561,9 @@
             "type": "string"
           },
           "name": {
+            "type": "string"
+          },
+          "websiteName": {
             "type": "string"
           },
           "published_at": {
