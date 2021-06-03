@@ -1,0 +1,15 @@
+{
+  "kind": "collectionType",
+  "collectionName": "strategies",
+  "info": {
+    "name": "strategy",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {}
+}
