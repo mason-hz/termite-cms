@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/cms/strategies": {
+    "/mdx-urls": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,9 +10,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Strategy"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Strategy"
+          "Mdx-url"
         ],
         "parameters": [
           {
@@ -191,12 +192,10 @@
             "deprecated": false
           }
         ]
-      }
-    },
-    "/strategies/count": {
-      "get": {
+      },
+      "post": {
         "deprecated": false,
-        "description": "",
+        "description": "Create a new record",
         "responses": {
           "200": {
             "description": "response",
@@ -204,8 +203,8 @@
               "application/json": {
                 "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -245,12 +244,22 @@
         },
         "summary": "",
         "tags": [
-          "Strategy"
+          "Mdx-url"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewMdx-url"
+              }
+            }
+          }
+        }
       }
     },
-    "/strategies/{id}": {
+    "/mdx-urls/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -260,7 +269,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Strategy"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -298,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "Strategy"
+          "Mdx-url"
+        ],
+        "parameters": []
+      }
+    },
+    "/mdx-urls/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Mdx-url"
         ],
         "parameters": [
           {
@@ -322,7 +392,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Strategy"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -360,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Strategy"
+          "Mdx-url"
         ],
         "requestBody": {
           "description": "",
@@ -368,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewStrategy"
+                "$ref": "#/components/schemas/NewMdx-url"
               }
             }
           }
@@ -434,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Strategy"
+          "Mdx-url"
         ],
         "parameters": [
           {
@@ -449,78 +523,13 @@
           }
         ]
       }
-    },
-    "/strategies": {
-      "post": {
-        "deprecated": false,
-        "description": "Create a new record",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Strategy"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Strategy"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewStrategy"
-              }
-            }
-          }
-        }
-      }
     }
   },
   "components": {
     "schemas": {
-      "Strategy": {
+      "Mdx-url": {
         "required": [
-          "id",
-          "chainId",
-          "address"
+          "id"
         ],
         "properties": {
           "id": {
@@ -529,41 +538,11 @@
           "chainId": {
             "type": "string"
           },
-          "website": {
+          "boardroomUrl": {
             "type": "string"
           },
-          "address": {
+          "liquidityUrl": {
             "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "websiteName": {
-            "type": "string"
-          },
-          "mdxType": {
-            "type": "string",
-            "enum": [
-              "boardroom",
-              "liquidity"
-            ]
-          },
-          "liquidityAddress": {
-            "type": "string"
-          },
-          "boardroomType": {
-            "type": "string",
-            "enum": [
-              "mdx",
-              "hmdx",
-              "wbnb"
-            ]
-          },
-          "boardroomPoolId": {
-            "type": "string"
-          },
-          "interestNumber": {
-            "type": "integer"
           },
           "published_at": {
             "type": "string",
@@ -571,50 +550,16 @@
           }
         }
       },
-      "NewStrategy": {
-        "required": [
-          "chainId",
-          "address"
-        ],
+      "NewMdx-url": {
         "properties": {
           "chainId": {
             "type": "string"
           },
-          "website": {
+          "boardroomUrl": {
             "type": "string"
           },
-          "address": {
+          "liquidityUrl": {
             "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "websiteName": {
-            "type": "string"
-          },
-          "mdxType": {
-            "type": "string",
-            "enum": [
-              "boardroom",
-              "liquidity"
-            ]
-          },
-          "liquidityAddress": {
-            "type": "string"
-          },
-          "boardroomType": {
-            "type": "string",
-            "enum": [
-              "mdx",
-              "hmdx",
-              "wbnb"
-            ]
-          },
-          "boardroomPoolId": {
-            "type": "string"
-          },
-          "interestNumber": {
-            "type": "integer"
           },
           "published_at": {
             "type": "string",
@@ -630,9 +575,5 @@
       }
     }
   },
-  "tags": [
-    {
-      "name": "Strategy"
-    }
-  ]
+  "tags": []
 }

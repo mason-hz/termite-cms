@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "description": "A Strapi application",
   "scripts": {
-    "develop": "strapi develop",
+    "dev": "strapi develop",
     "start": "NODE_ENV=production strapi start",
     "build": "strapi build",
     "strapi": "strapi",
@@ -12,19 +12,21 @@
   },
   "devDependencies": {},
   "dependencies": {
+    "axios": "^0.21.1",
+    "bignumber.js": "^9.0.1",
+    "knex": "0.21.18",
+    "sqlite3": "5.0.0",
     "strapi": "3.6.3",
     "strapi-admin": "3.6.3",
-    "strapi-utils": "3.6.3",
-    "strapi-plugin-content-type-builder": "3.6.3",
+    "strapi-connector-bookshelf": "3.6.3",
     "strapi-plugin-content-manager": "3.6.3",
-    "strapi-plugin-users-permissions": "3.6.3",
+    "strapi-plugin-content-type-builder": "3.6.3",
     "strapi-plugin-documentation": "3.6.3",
     "strapi-plugin-email": "3.6.3",
-    "strapi-plugin-upload": "3.6.3",
     "strapi-plugin-i18n": "3.6.3",
-    "strapi-connector-bookshelf": "3.6.3",
-    "knex": "0.21.18",
-    "sqlite3": "5.0.0"
+    "strapi-plugin-upload": "3.6.3",
+    "strapi-plugin-users-permissions": "3.6.3",
+    "strapi-utils": "3.6.3"
   },
   "author": {
     "name": "A Strapi developer"

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/mdx-urls",
+      "handler": "mdx-url.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mdx-urls/count",
+      "handler": "mdx-url.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mdx-urls/:id",
+      "handler": "mdx-url.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/mdx-urls",
+      "handler": "mdx-url.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/mdx-urls/:id",
+      "handler": "mdx-url.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/mdx-urls/:id",
+      "handler": "mdx-url.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

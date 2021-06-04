@@ -13,22 +13,46 @@
   "pluginOptions": {},
   "attributes": {
     "chainId": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "website": {
       "type": "string"
     },
-    "apy": {
-      "type": "string"
-    },
     "address": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "name": {
       "type": "string"
     },
     "websiteName": {
       "type": "string"
+    },
+    "mdxType": {
+      "type": "enumeration",
+      "enum": [
+        "boardroom",
+        "liquidity"
+      ]
+    },
+    "liquidityAddress": {
+      "type": "string"
+    },
+    "boardroomType": {
+      "type": "enumeration",
+      "enum": [
+        "mdx",
+        "hmdx",
+        "wbnb"
+      ]
+    },
+    "boardroomPoolId": {
+      "type": "string"
+    },
+    "interestNumber": {
+      "type": "integer"
     }
   }
 }

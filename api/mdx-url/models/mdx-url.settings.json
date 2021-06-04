@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mdx_urls",
+  "info": {
+    "name": "mdx-url"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "chainId": {
+      "type": "string"
+    },
+    "boardroomUrl": {
+      "type": "string"
+    },
+    "liquidityUrl": {
+      "type": "string"
+    }
+  }
+}
