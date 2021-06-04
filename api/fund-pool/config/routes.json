@@ -2,7 +2,7 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/fund-pools",
+      "path": "/cms/fund-pools",
       "handler": "fund-pool.find",
       "config": {
         "policies": []

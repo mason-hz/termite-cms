@@ -2,7 +2,7 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/strategies",
+      "path": "/cms/strategies",
       "handler": "strategy.find",
       "config": {
         "policies": []
