@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "fund_pools",
   "info": {
-    "name": "FundPool"
+    "name": "FundPool",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -12,13 +13,16 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "chainId": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "address": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

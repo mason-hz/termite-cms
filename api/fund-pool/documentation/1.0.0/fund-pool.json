@@ -531,7 +531,10 @@
     "schemas": {
       "Fund-pool": {
         "required": [
-          "id"
+          "id",
+          "name",
+          "chainId",
+          "address"
         ],
         "properties": {
           "id": {
@@ -553,6 +556,11 @@
         }
       },
       "NewFund-pool": {
+        "required": [
+          "name",
+          "chainId",
+          "address"
+        ],
         "properties": {
           "name": {
             "type": "string"

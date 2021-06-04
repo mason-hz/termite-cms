@@ -529,7 +529,8 @@
     "schemas": {
       "Mdx-url": {
         "required": [
-          "id"
+          "id",
+          "chainId"
         ],
         "properties": {
           "id": {
@@ -551,6 +552,9 @@
         }
       },
       "NewMdx-url": {
+        "required": [
+          "chainId"
+        ],
         "properties": {
           "chainId": {
             "type": "string"

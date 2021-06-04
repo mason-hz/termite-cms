@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "mdx_urls",
   "info": {
-    "name": "mdx-url"
+    "name": "mdx-url",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -12,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "chainId": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "boardroomUrl": {
       "type": "string"

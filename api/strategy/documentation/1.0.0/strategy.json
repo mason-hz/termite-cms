@@ -520,7 +520,8 @@
         "required": [
           "id",
           "chainId",
-          "address"
+          "address",
+          "name"
         ],
         "properties": {
           "id": {
@@ -571,7 +572,8 @@
       "NewStrategy": {
         "required": [
           "chainId",
-          "address"
+          "address",
+          "name"
         ],
         "properties": {
           "chainId": {

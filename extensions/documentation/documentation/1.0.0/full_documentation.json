@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "06/04/2021 9:50:37 PM"
+    "x-generation-date": "06/04/2021 10:08:37 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3839,7 +3839,10 @@
     "schemas": {
       "Fund-pool": {
         "required": [
-          "id"
+          "id",
+          "name",
+          "chainId",
+          "address"
         ],
         "properties": {
           "id": {
@@ -3861,6 +3864,11 @@
         }
       },
       "NewFund-pool": {
+        "required": [
+          "name",
+          "chainId",
+          "address"
+        ],
         "properties": {
           "name": {
             "type": "string"
@@ -3885,7 +3893,8 @@
       },
       "Mdx-url": {
         "required": [
-          "id"
+          "id",
+          "chainId"
         ],
         "properties": {
           "id": {
@@ -3907,6 +3916,9 @@
         }
       },
       "NewMdx-url": {
+        "required": [
+          "chainId"
+        ],
         "properties": {
           "chainId": {
             "type": "string"
@@ -3933,7 +3945,8 @@
         "required": [
           "id",
           "chainId",
-          "address"
+          "address",
+          "name"
         ],
         "properties": {
           "id": {
@@ -3984,7 +3997,8 @@
       "NewStrategy": {
         "required": [
           "chainId",
-          "address"
+          "address",
+          "name"
         ],
         "properties": {
           "chainId": {

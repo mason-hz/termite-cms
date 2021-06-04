@@ -25,7 +25,8 @@
       "unique": true
     },
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "websiteName": {
       "type": "string"
