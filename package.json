@@ -8,7 +8,8 @@
     "start": "NODE_ENV=production strapi start",
     "build": "strapi build",
     "strapi": "strapi",
-    "pm2": "pm2 start npm --name termite-cms -- run start"
+    "pm2": "pm2 start npm --name termite-cms -- run start",
+    "pm2:restart": "pm2 restart termite-cms"
   },
   "devDependencies": {},
   "dependencies": {
