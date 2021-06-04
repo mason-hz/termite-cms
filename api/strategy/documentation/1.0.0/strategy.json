@@ -548,9 +548,6 @@
               "liquidity"
             ]
           },
-          "liquidityAddress": {
-            "type": "string"
-          },
           "boardroomType": {
             "type": "string",
             "enum": [
@@ -559,10 +556,10 @@
               "wbnb"
             ]
           },
-          "boardroomPoolId": {
-            "type": "string"
-          },
           "interestNumber": {
+            "type": "integer"
+          },
+          "mdxPoolId": {
             "type": "integer"
           },
           "published_at": {
@@ -599,9 +596,6 @@
               "liquidity"
             ]
           },
-          "liquidityAddress": {
-            "type": "string"
-          },
           "boardroomType": {
             "type": "string",
             "enum": [
@@ -610,10 +604,10 @@
               "wbnb"
             ]
           },
-          "boardroomPoolId": {
-            "type": "string"
-          },
           "interestNumber": {
+            "type": "integer"
+          },
+          "mdxPoolId": {
             "type": "integer"
           },
           "published_at": {

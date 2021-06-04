@@ -37,9 +37,6 @@
         "liquidity"
       ]
     },
-    "liquidityAddress": {
-      "type": "string"
-    },
     "boardroomType": {
       "type": "enumeration",
       "enum": [
@@ -48,10 +45,10 @@
         "wbnb"
       ]
     },
-    "boardroomPoolId": {
-      "type": "string"
-    },
     "interestNumber": {
+      "type": "integer"
+    },
+    "mdxPoolId": {
       "type": "integer"
     }
   }

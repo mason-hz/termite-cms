@@ -18,27 +18,14 @@ function parseBoardroom(v) {
   }
   return obj;
 }
-function parseLps(v) {
-  const obj = {};
-  try {
-    v.forEach((item) => {
-      obj[item.address] = item;
-    });
-  } catch (error) {
-    console.log(error, "=====error");
-  }
-  return obj;
-}
 function getApy(i, boardroomReq, lpsReq) {
-  const { mdxType, boardroomType, liquidityAddress, boardroomPoolId } = i || {};
+  const { mdxType, boardroomType, mdxPoolId } = i || {};
   let apy = 0;
   try {
     if (mdxType === "boardroom") {
-      apy = boardroomReq[boardroomType][boardroomPoolId].pool_apy;
+      apy = boardroomReq[boardroomType][mdxPoolId].pool_apy;
     } else {
-      apy = new Bignumber(lpsReq[liquidityAddress].pool_apy)
-        .times(365)
-        .toNumber();
+      apy = new Bignumber(lpsReq[mdxPoolId].pool_apy).times(365).toNumber();
     }
   } catch (error) {
     console.log(error, "=====error");
@@ -64,7 +51,7 @@ async function getMdxData(mdxUrl) {
         };
       }
       if (lps.status === 200 && lps.data.code === 0) {
-        lpsReq = parseLps(lps.data.result);
+        lpsReq = lps.data.result;
       }
     }
   } catch (error) {
@@ -75,7 +62,6 @@ async function getMdxData(mdxUrl) {
 }
 module.exports = {
   parseBoardroom,
-  parseLps,
   getApy,
   getMdxData,
 };

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "06/04/2021 7:50:45 PM"
+    "x-generation-date": "06/04/2021 9:50:37 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3961,9 +3961,6 @@
               "liquidity"
             ]
           },
-          "liquidityAddress": {
-            "type": "string"
-          },
           "boardroomType": {
             "type": "string",
             "enum": [
@@ -3972,10 +3969,10 @@
               "wbnb"
             ]
           },
-          "boardroomPoolId": {
-            "type": "string"
-          },
           "interestNumber": {
+            "type": "integer"
+          },
+          "mdxPoolId": {
             "type": "integer"
           },
           "published_at": {
@@ -4012,9 +4009,6 @@
               "liquidity"
             ]
           },
-          "liquidityAddress": {
-            "type": "string"
-          },
           "boardroomType": {
             "type": "string",
             "enum": [
@@ -4023,10 +4017,10 @@
               "wbnb"
             ]
           },
-          "boardroomPoolId": {
-            "type": "string"
-          },
           "interestNumber": {
+            "type": "integer"
+          },
+          "mdxPoolId": {
             "type": "integer"
           },
           "published_at": {
