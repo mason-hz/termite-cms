@@ -9,7 +9,7 @@
     "build": "strapi build",
     "strapi": "strapi",
     "pm2": "pm2 start npm --name termite-cms -- run start",
-    "pm2:restart": "pm2 restart termite-cms"
+    "pm2:restart": "npm run build && pm2 restart termite-cms"
   },
   "devDependencies": {},
   "dependencies": {
