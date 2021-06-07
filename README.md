@@ -1,3 +1,17 @@
-# Strapi application
+## How to start
 
-A quick description of your strapi application
+### Dev
+
+```bash
+npm run build
+npm run develop
+```
+
+### Production
+
+Install pm2
+
+```bash
+npm run build
+npm run pm2
+```
