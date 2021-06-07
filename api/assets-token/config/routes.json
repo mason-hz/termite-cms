@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/cms/assets-tokens",
+      "handler": "assets-token.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/assets-tokens/count",
+      "handler": "assets-token.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/assets-tokens/:id",
+      "handler": "assets-token.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/assets-tokens",
+      "handler": "assets-token.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/assets-tokens/:id",
+      "handler": "assets-token.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/assets-tokens/:id",
+      "handler": "assets-token.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

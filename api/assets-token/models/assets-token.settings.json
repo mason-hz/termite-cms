@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "assets_tokens",
+  "info": {
+    "name": "assetsToken",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "symbol": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "logoURI": {
+      "type": "string"
+    },
+    "chainId": {
+      "type": "string"
+    }
+  }
+}

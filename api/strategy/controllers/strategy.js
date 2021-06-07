@@ -22,13 +22,6 @@ module.exports = {
         interestNumber: i.interestNumber,
       };
     });
-    // const rn = new Bignumber(1.549).div(17520);
-    // console.log(rn.toFixed(10));
-    // const pl = rn.plus(1);
-    // console.log(pl.toFixed(10));
-
-    // const aa = pl.pow(17520).minus(1).toFixed(2);
-    // console.log(aa);
     return strategies;
   },
 };
