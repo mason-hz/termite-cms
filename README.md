@@ -4,7 +4,7 @@
 
 ```bash
 npm run build
-npm run develop
+npm run dev
 ```
 
 ### Production
