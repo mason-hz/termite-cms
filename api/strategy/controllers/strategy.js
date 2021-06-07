@@ -29,6 +29,6 @@ module.exports = {
 
     // const aa = pl.pow(17520).minus(1).toFixed(2);
     // console.log(aa);
-    return { strategies };
+    return strategies;
   },
 };
