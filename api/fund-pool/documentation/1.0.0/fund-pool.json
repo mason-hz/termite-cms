@@ -549,6 +549,14 @@
           "address": {
             "type": "string"
           },
+          "type": {
+            "type": "string",
+            "default": "ordinary",
+            "enum": [
+              "ordinary",
+              "reinvest"
+            ]
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -570,6 +578,14 @@
           },
           "address": {
             "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "default": "ordinary",
+            "enum": [
+              "ordinary",
+              "reinvest"
+            ]
           },
           "published_at": {
             "type": "string",

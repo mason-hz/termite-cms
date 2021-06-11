@@ -23,6 +23,14 @@
     "address": {
       "type": "string",
       "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "ordinary",
+        "reinvest"
+      ],
+      "default": "ordinary"
     }
   }
 }
