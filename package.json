@@ -8,11 +8,12 @@
     "start": "NODE_ENV=production strapi start",
     "start:preview": "TERMITE_ENV=preview NODE_ENV=production strapi start",
     "build": "strapi build",
+    "build:preview": "TERMITE_ENV=preview strapi build",
     "strapi": "strapi",
     "pm2": "pm2 start npm --name termite-cms -- run start",
     "pm2:restart": "npm run build && pm2 restart termite-cms",
     "pm2:preview": "pm2 start npm --name termite-preview-cms -- run start:preview",
-    "pm2:restart:preview": "npm run build && pm2 restart termite-preview-cms"
+    "pm2:restart:preview": "npm run build:preview && pm2 restart termite-preview-cms"
   },
   "devDependencies": {},
   "dependencies": {
