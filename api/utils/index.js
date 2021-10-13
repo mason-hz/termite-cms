@@ -42,11 +42,11 @@ async function getMdxData(mdxUrl) {
         server.get(mdxUrl.liquidityUrl),
       ]);
       if (boardroom.status === 200 && boardroom.data.code === 0) {
-        const { boardroom_hmdx, boardroom_mdx, boardroom_wbnb } =
+        const { boardroom_hmdx, boardroom_lock, boardroom_wbnb } =
           boardroom.data.result;
         boardroomReq = {
           hmdx: parseBoardroom(boardroom_hmdx),
-          mdx: parseBoardroom(boardroom_mdx),
+          mdx: parseBoardroom(boardroom_lock),
           wbnb: parseBoardroom(boardroom_wbnb),
         };
       }

@@ -561,7 +561,8 @@
             "type": "integer"
           },
           "mdxPoolId": {
-            "type": "integer"
+            "type": "integer",
+            "default": 0
           },
           "published_at": {
             "type": "string",
@@ -610,7 +611,8 @@
             "type": "integer"
           },
           "mdxPoolId": {
-            "type": "integer"
+            "type": "integer",
+            "default": 0
           },
           "published_at": {
             "type": "string",
