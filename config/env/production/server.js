@@ -1,5 +1,5 @@
 const env = process.env.TERMITE_ENV;
-const port = env === "preview" ? 9911 : 9910;
+const port = env === "preview" ? 9911 : 9998;
 module.exports = ({ env }) => ({
   host: env("HOST", "0.0.0.0"),
   port: env.int("PORT", port),
